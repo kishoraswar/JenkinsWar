@@ -13,7 +13,7 @@ pipeline {
                     pwd
                     ls -lrt
                     //ssh -i "~/ubuntu.pem" ubuntu@ec2-13-127-255-103.ap-south-1.compute.amazonaws.com
-                    scp -i ~/ubuntu.pem **/target/*.war ubuntu@ec2-13-127-255-103.ap-south-1.compute.amazonaws.com:/var/"
+                    scp -i ~/ubuntu.pem **/target/*.war ubuntu@ec2-13-127-255-103.ap-south-1.compute.amazonaws.com:/"
                        
                        ''' 
                 }

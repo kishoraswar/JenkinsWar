@@ -19,6 +19,8 @@ stages{
                 success {
                     echo 'Now Archiving...'
                     archiveArtifacts artifacts: '**/target/*.war'
+                pwd
+                sss
                 }
             }
         }
@@ -27,7 +29,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "scp -i /var/lib/jenkins/workspace/jenkins_aws/ubuntu.pem **/target/*.war ubuntu@${params.ubuntu}:/home/ubuntu/deepak/apache-tomcat-7.0.86/webapps"
+                        sh "scp -i /var/lib/jenkins/workspace/jenkins_aws/ubuntu.pem **/target/*.war ubuntu@13.126.3.74:/home/ubuntu/deepak/apache-tomcat-7.0.86/webapps"
                     }
                 }
 
